@@ -10,8 +10,13 @@
 
     //PROCESSAMENTO
     function cubo(num) {
-        num = num ** 3;
-        alert(`O cubo do número informado é: ${num}`);
+        if (num == 0 || Number.isInteger(Number(num))) {
+            num = num ** 3;
+            alert(`O cubo do número informado é: ${num}`);
+
+        } else {
+            alert(`Informe um número inteiro`);
+        }
     }
 
     //SAÍDA

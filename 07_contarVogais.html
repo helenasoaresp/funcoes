@@ -11,18 +11,21 @@
 
     //PROCESSAMENTO
     function vogais(palavra) {
-        let vogais = ["A", "E" "I" "O" "U" "a" "e" "i" "o" "u"];
-        let vogal = [];
+        let vogais = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
+        let vogal = 0;
 
-        if (palavra) {
-            palavra.includes(vogais);
-            palavra.push(vogal)
+        palavra = palavra.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+        for (let letra of palavra) {
+            if (vogais.includes(letra)) {
+                vogal++;
+            }
         }
 
-        alert(palavra.lenght);
+        alert(`A palavra "${palavra}" tem ${vogal} vogais.`);
     }
 
     //SAÍDA
-vogais(palavra);
+    vogais(palavra);
 
 </script>

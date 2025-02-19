@@ -9,14 +9,14 @@
     //ENTRADA
     const nome = prompt("Digite o seu nome: ");
 
+    //PROCESSAMENTO
     function cumprimento(nome) {
+        nome = nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase();
+
         alert(`Bom dia, ${nome}!`);
     }
 
-    //PROCESSAMENTO
+    //SAÍDA
     cumprimento(nome);
 
-
-    //SAÍDA
-    
 </script>
